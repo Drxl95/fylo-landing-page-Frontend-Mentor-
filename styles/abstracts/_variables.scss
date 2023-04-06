@@ -1,0 +1,20 @@
+$viewport_size: (
+  m: 768px,
+  l: 1024px,
+  xl: 1200px,
+  xxl: 1440px,
+);
+
+// Colors
+
+/*Primary*/
+$pc-dark-blue: hsl(243, 87%, 12%);
+$pc-desaturated-blue: hsl(238, 22%, 44%);
+
+/*Accent*/
+$acc-bright-blue: hsl(224, 93%, 58%);
+$acc-moderate-cyan: hsl(170, 45%, 43%);
+
+/*Neutral*/
+$light-grayish-blue: hsl(240, 75%, 98%);
+$light-gray: hsl(0, 0%, 75%);
