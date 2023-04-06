@@ -1,0 +1,64 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/typography" as t;
+
+.header {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__logo {
+      width: 90px;
+    }
+    &__items {
+      display: flex;
+      gap: 1.5rem;
+      a {
+        text-decoration: none;
+        font-family: t.$ff-Raleway;
+        color: v.$pc-dark-blue;
+        font-size: 15px;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    .header__img {
+      max-width: 100%;
+      margin: 6rem 0rem 3rem;
+    }
+    .header__text-container {
+      text-align: center;
+      .header__title {
+        font-family: t.$ff-Raleway;
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+      }
+      .header__content {
+        font-family: t.$ff-Open_Sans;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+      .header__form {
+        display: flex;
+        flex-direction: column;
+        &-input {
+          height: 50px;
+          margin-bottom: 1rem;
+          border-radius: 5px;
+        }
+        &-button {
+          height: 50px;
+          background-color: v.$acc-bright-blue;
+          color: v.$light-grayish-blue;
+          font-family: t.$ff-Raleway;
+          font-weight: t.$fw-bold;
+          font-size: 1rem;
+          border: none;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}

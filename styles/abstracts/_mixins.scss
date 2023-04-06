@@ -2,16 +2,3 @@
 @use "../abstracts/typography" as t;
 
 //mobile & tablet
-
-@mixin title {
-  font-family: t.$ff-jammuree;
-  color: v.$nc-dark-grayish-blue;
-  margin-bottom: 1rem;
-}
-
-@mixin body {
-  font-family: t.$ff-jammuree;
-  color: v.$nc-grayish-blue;
-  font-size: t.$fs;
-  line-height: 1.5;
-}

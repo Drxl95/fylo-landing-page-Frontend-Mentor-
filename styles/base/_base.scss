@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/typography" as t;
+
 *,
 *::after,
 *::before {
@@ -9,4 +12,13 @@
 body {
   margin: 0;
   box-sizing: border-box;
+}
+
+#main {
+  margin: 2rem;
+}
+
+::placeholder {
+  font-family: t.$ff-Raleway;
+  letter-spacing: 1px;
 }
