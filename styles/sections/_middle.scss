@@ -2,12 +2,77 @@
 @use "../abstracts/typography" as t;
 
 .middle {
-  background-image: url(../../images/bg-curve-mobile.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin-top: 7rem;
+  margin-bottom: 4.5rem;
+  &__background {
+    width: 100%;
+    margin-top: 3rem;
+    transform: translateY(1rem);
+  }
   &__container {
-    margin-inline: 1rem;
+    background-color: v.$light-grayish-blue;
+    display: flex;
+    flex-direction: column;
+    .middle__img {
+      max-width: 100%;
+      margin: 3rem 1rem;
+    }
+    .middle__text-container {
+      margin-inline: 1rem;
+      .middle__title {
+        text-align: center;
+        font-family: t.$ff-Raleway;
+        font-weight: t.$fw-bold;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+      .middle__content {
+        font-family: t.$ff-Open_Sans;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+      }
+      .middle__link-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        margin-bottom: 3rem;
+        .underlined {
+          display: inline-block;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 9.15rem;
+            border-bottom: 1.75px solid v.$acc-moderate-cyan;
+            margin-top: 1.5px;
+          }
+        }
+
+        a.middle__link {
+          color: v.$acc-moderate-cyan;
+          font-family: t.$ff-Open_Sans;
+          font-size: 0.85rem;
+          text-decoration: none;
+
+          ::after {
+            content: url("../../images/icon-arrow.svg");
+            margin-left: 0.5rem;
+            vertical-align: middle;
+          }
+          &:hover {
+            color: hsla(170, 82%, 45%, 0.658);
+          }
+          &:hover::after {
+            border-bottom: 1.75px solid hsla(170, 82%, 45%, 0.659);
+          }
+          &:hover p::after {
+            content: url("../../images/icon-arrow-copy.svg");
+          }
+        }
+      }
+    }
   }
 }

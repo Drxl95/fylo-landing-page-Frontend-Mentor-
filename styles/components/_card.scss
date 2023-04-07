@@ -1,0 +1,43 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/typography" as t;
+
+.card {
+  background-color: #ffff;
+  border-radius: 5px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  &__container {
+    padding-block: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 1.25rem;
+    svg {
+      margin-bottom: 0.5rem;
+    }
+    .card__content {
+      font-family: t.$ff-Open_Sans;
+      font-size: 0.78rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+    .testimonial {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      &__img {
+        border-radius: 50px;
+        width: 30px;
+        height: 30px;
+      }
+      &__text-container {
+        .testimonial__name {
+          font-family: t.$ff-Raleway;
+          font-weight: t.$fw-bold;
+          font-size: 0.75rem;
+        }
+        .testimonial__info {
+          font-family: t.$ff-Open_Sans;
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+}
