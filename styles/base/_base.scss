@@ -14,11 +14,9 @@ body {
   box-sizing: border-box;
 }
 
-#main {
-  margin: 2rem;
-}
-
 ::placeholder {
   font-family: t.$ff-Raleway;
   letter-spacing: 1px;
+  font-weight: t.$fw-normal;
+  font-size: 14px;
 }

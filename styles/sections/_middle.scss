@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/typography" as t;
+
+.middle {
+  background-image: url(../../images/bg-curve-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 7rem;
+}
