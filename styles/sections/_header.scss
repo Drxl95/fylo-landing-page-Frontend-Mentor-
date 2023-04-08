@@ -102,6 +102,8 @@
           text-align: left;
         }
         &-button {
+          box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+
           height: 50px;
           background-color: v.$acc-bright-blue;
           color: v.$light-grayish-blue;

@@ -2,7 +2,6 @@
 @use "../abstracts/typography" as t;
 
 .middle {
-  margin-bottom: 4.5rem;
   &__background {
     width: 100%;
     margin-top: 3rem;
@@ -17,17 +16,18 @@
       margin: 3rem 1rem;
     }
     .middle__text-container {
-      margin-inline: 1rem;
+      margin-inline: 1.5rem;
+      padding-bottom: 5rem;
       .middle__title {
         text-align: center;
         font-family: t.$ff-Raleway;
         font-weight: t.$fw-bold;
-        font-size: 1rem;
+        font-size: 1.25rem;
         margin-bottom: 2rem;
       }
       .middle__content {
         font-family: t.$ff-Open_Sans;
-        font-size: 0.85rem;
+        font-size: 1rem;
         line-height: 1.5;
         margin-bottom: 2rem;
       }
@@ -45,7 +45,7 @@
             content: "";
             position: absolute;
             left: 0;
-            width: 9.15rem;
+            width: 8.75rem;
             border-bottom: 1.75px solid v.$acc-moderate-cyan;
             margin-top: 1.5px;
           }
@@ -54,7 +54,7 @@
         a.middle__link {
           color: v.$acc-moderate-cyan;
           font-family: t.$ff-Open_Sans;
-          font-size: 0.85rem;
+          font-size: 0.8rem;
           text-decoration: none;
 
           ::after {
