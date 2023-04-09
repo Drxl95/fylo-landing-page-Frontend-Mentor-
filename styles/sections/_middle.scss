@@ -63,7 +63,7 @@
           text-decoration: none;
 
           ::after {
-            content: url("../../images/icon-arrow.svg");
+            content: url("./images/icon-arrow.svg");
             margin-left: 0.5rem;
             vertical-align: middle;
           }
@@ -73,9 +73,9 @@
           &:hover::after {
             border-bottom: 1.75px solid hsla(170, 82%, 45%, 0.659);
           }
-          // &:hover p::after {
-          //   content: url("../../images/icon-arrow-copy.svg");
-          // }
+          &:hover p::after {
+            content: url("./images/icon-arrow-copy.svg");
+          }
         }
       }
     }
