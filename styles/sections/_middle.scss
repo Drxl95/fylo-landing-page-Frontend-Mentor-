@@ -13,12 +13,12 @@
     }
   }
   &__container {
-    background-color: v.$light-grayish-blue;
+    background-color: hsla(240, 80%, 98%, 0.781);
     display: flex;
     flex-direction: column;
     .middle__img {
       max-width: 100%;
-      margin: 3rem 1rem;
+      margin: 3rem 2rem;
     }
     .middle__text-container {
       margin-inline: 1.5rem;
@@ -27,12 +27,12 @@
         text-align: center;
         font-family: t.$ff-Raleway;
         font-weight: t.$fw-bold;
-        font-size: 1.25rem;
+        font-size: 1rem;
         margin-bottom: 2rem;
       }
       .middle__content {
         font-family: t.$ff-Open_Sans;
-        font-size: 1rem;
+        font-size: 0.9rem;
         line-height: 1.5;
         margin-bottom: 2rem;
       }
@@ -118,6 +118,14 @@
         .middle__link-container {
           justify-content: left;
           margin-bottom: 3rem;
+          a.middle__link {
+            font-size: 0.9rem;
+          }
+          .underlined {
+            &::after {
+              width: 9.75rem;
+            }
+          }
         }
       }
     }
@@ -131,6 +139,9 @@
         .middle__title {
           font-size: 2rem;
         }
+        .middle__content {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -143,7 +154,7 @@
           font-size: 2.5rem;
         }
         .middle__content {
-          width: 75%;
+          width: 80%;
         }
       }
     }

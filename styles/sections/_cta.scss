@@ -10,7 +10,7 @@
     .cta__title {
       color: #fff;
       font-family: t.$ff-Raleway;
-      font-size: 1.35rem;
+      font-size: 1.2rem;
       margin-bottom: 1rem;
       letter-spacing: 1px;
     }
@@ -20,7 +20,7 @@
       font-size: 0.9rem;
       margin-bottom: 2rem;
     }
-    .header__form {
+    .cta__form {
       display: flex;
       flex-direction: column;
       position: relative;
@@ -40,7 +40,7 @@
         border-radius: 4px;
         font-size: 15px;
         font-family: t.$ff-Raleway;
-        padding-left: 1.5rem;
+
         border: none;
         background-color: #fff;
         &:focus {
@@ -87,9 +87,9 @@
         color: v.$light-grayish-blue;
         font-family: t.$ff-Raleway;
         font-weight: t.$fw-bold;
-        font-size: 1rem;
+        font-size: 0.75rem;
         border: none;
-        margin-top: 0.75rem;
+        margin-top: 0.5rem;
         &:hover,
         &:focus {
           background-color: hsl(219, 96%, 70%);
@@ -107,7 +107,7 @@
       padding: 5rem 4rem 3.5rem;
       display: flex;
       gap: 3rem;
-      .header__form {
+      .cta__form {
         width: 80%;
       }
     }
@@ -117,7 +117,7 @@
 @media only screen and (min-width: map-get(v.$viewport_size, xl)) {
   .cta {
     .cta__container {
-      .header__form {
+      .cta__form {
         &-button {
           width: 50%;
         }
@@ -132,9 +132,12 @@
       gap: 12rem;
       .cta__text-container {
         width: 60%;
+        .cta__title {
+          font-size: 1.55rem;
+        }
       }
 
-      .header__form {
+      .cta__form {
         input {
           width: 95%;
         }

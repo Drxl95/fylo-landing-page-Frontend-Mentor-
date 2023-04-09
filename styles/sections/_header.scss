@@ -17,7 +17,7 @@
         text-decoration: none;
         font-family: t.$ff-Raleway;
         color: v.$pc-dark-blue;
-        font-size: 15px;
+        font-size: 0.8rem;
       }
     }
   }
@@ -33,12 +33,13 @@
       text-align: center;
       .header__title {
         font-family: t.$ff-Raleway;
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         margin-bottom: 2rem;
+        line-height: 1.5;
       }
       .header__body {
         font-family: t.$ff-Open_Sans;
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin-bottom: 2rem;
       }
       .header__form {
@@ -61,7 +62,7 @@
           font-size: 15px;
           font-family: t.$ff-Raleway;
           font-weight: t.$fw-bold;
-          padding-left: 1.5rem;
+
           border: 1.5px black solid;
           background-color: #fff;
           &:focus {
@@ -125,67 +126,78 @@
   }
 }
 @media only screen and (min-width: map-get(v.$viewport_size, m)) {
-  .header__content {
-    .header__text-container {
-      .header__form {
-        &-button {
-          margin-top: 1rem;
-          width: 35%;
-        }
-      }
-    }
-  }
-}
-@media only screen and (min-width: map-get(v.$viewport_size, l)) {
   .header {
-    margin: 3rem 4rem;
-    .navbar {
-      &__logo {
-        width: 120px;
-      }
-    }
+    margin: 2rem;
     &__content {
-      flex-direction: row-reverse;
-      align-items: center;
-      gap: 2rem;
-      .header__img {
-        max-width: 50%;
-      }
       .header__text-container {
-        text-align: left;
-        .header__title {
-          margin-bottom: 1rem;
+        .header__form {
+          &-button {
+            margin-top: 1rem;
+            width: 35%;
+          }
         }
       }
     }
   }
-}
-@media only screen and (min-width: map-get(v.$viewport_size, xl)) {
-  .header__content {
-    margin-bottom: 1rem;
-
-    .header__text-container {
-      width: 45%;
-      .header__title {
-        font-size: 2.5rem;
+  @media only screen and (min-width: map-get(v.$viewport_size, l)) {
+    .header {
+      margin: 4rem 4rem 3rem;
+      .navbar {
+        &__logo {
+          width: 150px;
+        }
+        &__items {
+          gap: 3rem;
+          a {
+            font-size: 1rem;
+          }
+        }
       }
-      .header__form {
-        &--mobile {
-          display: none;
+      &__content {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 4rem;
+        .header__img {
+          max-width: 50%;
         }
-        &--desktop {
-          display: inline;
+        .header__text-container {
+          text-align: left;
+          .header__title {
+            margin-bottom: 1rem;
+          }
         }
-        input {
-          width: 55%;
-          margin-right: 0.75rem;
+      }
+    }
+  }
+  @media only screen and (min-width: map-get(v.$viewport_size, xl)) {
+    .header__content {
+      margin-bottom: 1rem;
+
+      .header__text-container {
+        .header__title {
+          font-size: 2.5rem;
         }
-        label {
-          top: 4px;
+        .header__body {
+          font-size: 1rem;
         }
-        &-button {
-          margin-top: 0rem;
-          width: 35%;
+        .header__form {
+          &--mobile {
+            display: none;
+          }
+          &--desktop {
+            display: inline;
+          }
+          input {
+            width: 55%;
+            margin-right: 0.75rem;
+          }
+          label {
+            top: 4px;
+          }
+          &-button {
+            margin-top: 0rem;
+            width: 35%;
+          }
         }
       }
     }
