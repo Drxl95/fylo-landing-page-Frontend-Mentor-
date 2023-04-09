@@ -1,0 +1,77 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/typography" as t;
+
+.footer {
+  background-color: v.$pc-dark-blue;
+  &__container {
+    padding: 4rem 3rem;
+    svg {
+      margin-bottom: 3rem;
+    }
+    .footer__navigation-container {
+      color: #fff;
+      font-family: t.$ff-Open_Sans;
+      .footer__contact-info {
+        margin-bottom: 3.5rem;
+        .contact-info-flex {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 1rem;
+          font-size: 1rem;
+        }
+      }
+      .footer__navigation {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+        a {
+          font-family: t.$ff-Open_Sans;
+          color: #fff;
+          text-decoration: none;
+          margin-bottom: 1rem;
+          &:hover,
+          &:focus {
+            color: v.$acc-bright-blue;
+          }
+        }
+      }
+      .footer__social-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        a {
+          font-size: 1.5rem;
+          color: #fff;
+          &:hover,
+          &:focus {
+            color: v.$acc-bright-blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: map-get(v.$viewport_size, l)) {
+  .footer__container {
+    padding: 6rem 4rem 2rem;
+    svg {
+      margin-bottom: 1rem;
+    }
+    .footer__navigation-container {
+      display: flex;
+      justify-content: space-between;
+      .footer__social-links {
+        align-self: flex-start;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: map-get(v.$viewport_size, xxl)) {
+  .footer__container {
+    padding-right: 20vw;
+  }
+}

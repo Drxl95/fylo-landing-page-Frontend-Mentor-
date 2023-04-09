@@ -15,7 +15,7 @@
     }
     .card__content {
       font-family: t.$ff-Open_Sans;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       margin-bottom: 1.25rem;
       line-height: 1.5;
     }
@@ -25,14 +25,15 @@
       gap: 0.5rem;
       &__img {
         border-radius: 50px;
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
       }
       &__text-container {
         .testimonial__name {
           font-family: t.$ff-Raleway;
           font-weight: t.$fw-bold;
-          font-size: 0.75rem;
+          font-size: 0.78rem;
+          letter-spacing: 1px;
         }
         .testimonial__info {
           font-family: t.$ff-Open_Sans;
@@ -40,5 +41,18 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (min-width: map-get(v.$viewport_size, l)) {
+  .card {
+    margin-inline: 0rem;
+    width: 70%;
+  }
+}
+@media only screen and (min-width: map-get(v.$viewport_size, xxl)) {
+  .card {
+    margin-inline: 0rem;
+    width: 45%;
   }
 }

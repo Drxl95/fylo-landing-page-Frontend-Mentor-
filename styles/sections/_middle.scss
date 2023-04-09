@@ -3,9 +3,14 @@
 
 .middle {
   &__background {
-    width: 100%;
-    margin-top: 3rem;
-    transform: translateY(1rem);
+    &--mobile {
+      width: 100%;
+      margin-top: 3rem;
+      transform: translateY(1rem);
+    }
+    &--desktop {
+      display: none;
+    }
   }
   &__container {
     background-color: v.$light-grayish-blue;
@@ -71,6 +76,74 @@
           &:hover p::after {
             content: url("../../images/icon-arrow-copy.svg");
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: map-get(v.$viewport_size, l)) {
+  .middle {
+    &__background {
+      &--mobile {
+        display: none;
+      }
+      &--desktop {
+        display: block;
+        width: 100%;
+        margin-top: 3rem;
+        transform: translateY(2rem);
+      }
+    }
+
+    .middle__container {
+      flex-direction: row-reverse;
+      padding-top: 6rem;
+      padding-bottom: 5rem;
+      .middle__img {
+        max-width: 40%;
+        align-self: flex-start;
+      }
+      .middle__text-container {
+        text-align: left;
+        margin-inline: 4rem;
+        padding-bottom: 0rem;
+        .middle__title {
+          text-align: left;
+          font-size: 1.75rem;
+        }
+        .middle__content {
+          margin-bottom: 1rem;
+        }
+        .middle__link-container {
+          justify-content: left;
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: map-get(v.$viewport_size, xl)) {
+  .middle {
+    .middle__container {
+      .middle__text-container {
+        .middle__title {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: map-get(v.$viewport_size, xxl)) {
+  .middle {
+    .middle__container {
+      .middle__text-container {
+        .middle__title {
+          font-size: 2.5rem;
+        }
+        .middle__content {
+          width: 75%;
         }
       }
     }
